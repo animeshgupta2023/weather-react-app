@@ -119,13 +119,14 @@ http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=me
 The API key is stored in .env and accessed via import.meta.env.VITE_API_KEY (Vite's environment variable syntax).
 
 # 📦 Dependencies
-Package	Version
-react	^18.2.0
-react-dom	^18.2.0
-@mui/material	^5.14.0
-@mui/icons-material	^5.14.0
-vite	^5.0.0
-eslint	^8.0.0
+| Package                 | Version |
+|-------------------------|---------|
+| react                   | ^18.2.0 |
+| react-dom               | ^18.2.0 |
+| @mui/material           | ^5.14.0 |
+| @mui/icons-material     | ^5.14.0 |
+| vite                    | ^5.0.0  |
+| eslint                  | ^8.0.0  |
 
 
 # 🚧 Future Improvements
