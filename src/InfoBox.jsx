@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import "./InfoBox.css";
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import AcUnitIcon from '@mui/icons-material/AcUnit';
+import AcUnitIcon from '@mui/icons-material/AcUnit'; 
 
 export default function InfoBox({info}){
     const INIT_URL = 
@@ -24,8 +24,8 @@ export default function InfoBox({info}){
                 <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image={info.humidity > 80? RAINY_URL: (info.temp > 15? HOT_URL: COLD_URL)  }
-                        title="green iguana"
+                        image={info.city !== "Loading..."? (info.humidity > 80? RAINY_URL: (info.temp > 15? HOT_URL: COLD_URL)): INIT_URL}
+                        title="city image"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
@@ -36,7 +36,7 @@ export default function InfoBox({info}){
                             <p>Humidity: {info.humidity}</p>
                             <p>Min Temperature: {info.tempMin}</p>
                             <p>Max Temperature: {info.tempMax}</p>
-                            <p>The weather can be described as {info.weather} feels like {info.feelsLike}&deg;</p>
+                            {info.city !== "Loading..." ? <p>The weather can be described as {info.weather} feels like {info.feelsLike}&deg;</p>:null}
                         </Typography>
                     </CardContent>
                 </Card>

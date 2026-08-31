@@ -7,6 +7,6 @@ function App() {
       <WeatherApp/>
     </>
   )
-}
+} 
 
 export default App
